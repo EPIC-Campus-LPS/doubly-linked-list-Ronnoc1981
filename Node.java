@@ -14,14 +14,14 @@ public class Node<E> {
 
     public void setNext(Node<E> next) {
         this.next = next;
-        if(this.next != next){
+        if(this.next != next.getPrevNode()){
             next.setPrev(this);
         }
     }
 
     public void setPrev(Node<E> prev) {
         this.prev = prev;
-        if(this.prev != prev){
+        if(this.prev != prev.getNextNode()){
             prev.setNext(this);
         }
     }
